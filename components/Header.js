@@ -48,6 +48,7 @@ const Headers = styled.header`
     display : flex;
     justify-content : space-between;
     align-items: center;
+    z-index: 999;
     @media screen and (max-width: 575px) {
         flex-direction: column;
         align-items: flex-start;

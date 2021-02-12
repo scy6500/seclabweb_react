@@ -1,11 +1,14 @@
 import Layout from "../components/Layout"
+import Home from "../components/Home"
 import styled, { createGlobalStyle } from 'styled-components';
 
-const Home = () => {
+const Seclab = () => {
     return (
         <div>
             <GlobalStyle/>
-            <Layout>as</Layout>
+            <Layout>
+                <Home></Home>
+            </Layout>
         </div>
     )
 }
@@ -18,4 +21,4 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
-export default Home;
+export default Seclab;
