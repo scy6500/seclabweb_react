@@ -9,19 +9,13 @@ const Header = () => {
     const texts = ["Home", "About", "Publication", "Members", "Contact"];
     const [showdetail, setShowDetail] = useState(false);
     const onIconClicked = useCallback(() => {
-        if (showdetail === true) {
-            setShowDetail(false);
-        }
-        else{
-            setShowDetail(true);
-        }
-        console.log(showdetail)
+        setShowDetail(showdetail => !showdetail)
     }, [showdetail]);
 
     return (
         <Headers>
             <Link href="/"><Logo>Information Security Lab</Logo></Link>
-            <Menu>
+            <Menu showdetail={showdetail}>
                 {texts.map((v) => (
                     <Menu_btn key={v} text={v}></Menu_btn>
                 ))}
@@ -75,7 +69,7 @@ const Menu = styled.div`
         flex-direction: column;
         text-align: center;
         width: 100%;
-        display: none;
+        display: ${({ showdetail }) => showdetail ? 'flex' : 'none'};
     }
 `
 
