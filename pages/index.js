@@ -1,14 +1,16 @@
-import Layout from "../components/Layout"
-import Home from "../components/Home"
+import Header from "../components/Header";
+import Home from "../components/Home";
+import About from "../components/About";
 import styled, { createGlobalStyle } from 'styled-components';
 
 const Seclab = () => {
     return (
         <div>
             <GlobalStyle/>
-            <Layout>
-                <Home></Home>
-            </Layout>
+            <Header></Header>
+            <Home></Home>
+            <About></About>
+
         </div>
     )
 }

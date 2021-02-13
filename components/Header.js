@@ -62,6 +62,10 @@ const Logo = styled.a`
     margin: auto 20px;
     color : white;
     text-decoration: none;
+    &:hover {
+        color: gray;
+        cursor: pointer;
+    } 
 `
 
 const Menu = styled.div`

@@ -11,6 +11,8 @@ const Home = () => {
                 layout="fill"
                 z-index={-1}
                 position="relative"
+                object-fit="cover"
+
         />
             <Text>Welcome to Kookmin University's Information Security Lab!</Text>
         </Inner>
@@ -20,8 +22,7 @@ const Home = () => {
 
 const Inner = styled.div`
     height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    position: relative;
     z-index: 99;
     position: relative;
 `
