@@ -10,7 +10,7 @@ const Header = () => {
     const [showdetail, setShowDetail] = useState(false);
     const onIconClicked = useCallback(() => {
         setShowDetail(showdetail => !showdetail)
-    }, [showdetail]);
+    }, []);
 
     return (
         <Headers>
