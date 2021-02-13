@@ -11,7 +11,6 @@ const About = () => {
                         Malware Detection and Cyber Threat Intelligence(CTI). Specifically, we focus on Artificial Intelligence Security.
                 </Inner_content>
             </Inner>
-
     )
 }
 
@@ -22,7 +21,8 @@ const Inner = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 0 100px 0 100px;
-`;
+    overflow: hidden;
+`
 
 const Inner_title = styled.h2`
     text-align: center;
@@ -30,14 +30,8 @@ const Inner_title = styled.h2`
     margin-right: 80px;
     line-height: 250px;
 `
-const A = styled.div`
-display: table-cell;
-vertical-align: middle;
-`
+
 const Inner_content = styled.h4`
-
-
 `
-
 
 export default About;
