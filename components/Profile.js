@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Image from 'next/image';
 import {MailOutlined} from "@ant-design/icons";
 import Link from "next/link";
+import PropTypes from "prop-types";
 
 const Profile = (props) => {
     const {name, role, email} = props
@@ -27,4 +28,11 @@ const Inner = styled.div`
 const Role = styled.h6`
     color: #aeaeae;
 `
+
+Profile.propTypes = {
+    name: PropTypes.string.isRequired,
+    role: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired
+}
+
 export default Profile;
