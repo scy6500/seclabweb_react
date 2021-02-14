@@ -1,7 +1,8 @@
 import Header from "../components/Header";
 import Home from "../components/Home";
 import About from "../components/About";
-import Publication from"../components/Publication"
+import Publication from "../components/Publication"
+import Members from "../components/Members"
 import styled, { createGlobalStyle } from 'styled-components';
 
 const Seclab = () => {
@@ -12,6 +13,8 @@ const Seclab = () => {
             <Home></Home>
             <About></About>
             <Publication></Publication>
+            <Members></Members>
+
         </div>
     )
 }
