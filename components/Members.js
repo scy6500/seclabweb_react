@@ -1,26 +1,35 @@
 import styled from "styled-components";
 import Profile from "../components/Profile";
+import React, { useEffect, useState } from "react";
+import dataBase from "../public/Firebase";
 
 const Members = () => {
+    const [memberData, setMemberData] = useState([])
+    const getMembers = async() => {
+        const membersDb = dataBase.collection("members");
+        const members = await membersDb.orderBy("order").get();
+        members.forEach(member => {
+            setMemberData(memberData => [...memberData, member.data()])
+        }
+        )
+      }
+    useEffect(() => {
+        getMembers();
+    }, [])
     return (
         <Inner>
             <Title>Members</Title>
             <Box>
-                <Profile name={"Yoon MyungKeun"} role={"Professor"} email={"mkyoon@kookmin.ac.kr"}></Profile>
-                <Profile name={"Hur Junnyeong"} role={"Master's Student"} email={"m2019551@kookmin.ac.kr"}></Profile>
-                <Profile name={"Son Hyeongy "} role={"Master's Student"} email={"forever2331@kookmin.ac.kr"}></Profile>
-            </Box>
-            <Box>
-                <Profile name={"Jeon Hahoon"} role={"Master's Student"} email={"plmokn1007@kookmin.ac.kr"}></Profile>
-                <Profile name={"Jin Segwang "} role={"Master's Student"} email={"20133264@kookmin.ac.kr"}></Profile>
-                <Profile name={"Byeon Seunghun "} role={"Master's Student"} email={"20175164@kookmin.ac.kr"}></Profile>
+                {memberData.map((v) => (
+                    <Profile key={v.order} name={v.name} role={v.role} email={v.email}></Profile>
+                ))}
             </Box>
         </Inner>
     )
 }
 
 const Inner = styled.div`
-    height: 450px;
+    height: 300px;
     width: 100%;
     background-color: white;
 `
