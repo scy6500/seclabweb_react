@@ -65,8 +65,8 @@ const Domestic = styled(GatewayOutlined)`
 
 const Category = styled.div`
     display: flex;
-    margin: 60px 300px;
-    justify-content : space-between;
+    margin: 60px 0;
+    justify-content : space-around;
 `
 const Overseas_pub = styled.div`
     text-align: center;
