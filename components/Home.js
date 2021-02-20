@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Home = () => {
     return (
-        <Inner>
+        <Inner id={"Home"}>
             <Filiter></Filiter>
             <Image
                 src="/security.jpg"

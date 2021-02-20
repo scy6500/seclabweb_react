@@ -20,10 +20,10 @@ const Publication = () => {
         setisDomesticHover(false);
     }, []);
     return (
-        <Inner>
+        <Inner id={"Publication"}>
             <Title>Publication</Title>
             <Category>
-            <Link href="/">
+            <Link href="/international_publication">
                 <Overseas_pub onMouseEnter={overseas_mouseenter} onMouseLeave={overseas_mouseleave} isDomesticHover={isDomesticHover}>
                         <Overseas/>
                         <h3>Overseas publications</h3>

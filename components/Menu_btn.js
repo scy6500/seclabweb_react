@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import PropTypes from "prop-types";
+import Link from "next/link";
 
 const Menu_btn = (props) => {
     const {text} = props;
@@ -8,7 +9,7 @@ const Menu_btn = (props) => {
     )
 }
 
-const Btn = styled.a` 
+const Btn = styled.div` 
     padding: 8px 12px;
     color: white;
     &:hover {

@@ -14,7 +14,6 @@ const Seclab = () => {
             <About></About>
             <Publication></Publication>
             <Members></Members>
-
         </div>
     )
 }

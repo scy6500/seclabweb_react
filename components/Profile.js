@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 const Profile = (props) => {
     const {name, role, email} = props
     return (
-        <Inner>
+        <Inner id={"Profile"}>
             <Image
                 src="/blank-profile.png"
                 alt="blank profile"

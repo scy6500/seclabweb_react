@@ -4,9 +4,10 @@ import Link from "next/link";
 import {MenuOutlined} from "@ant-design/icons";
 import "antd/dist/antd.css"
 import { useCallback, useState } from "react";
+import ScrollTo from 'react-scroll-into-view'
 
 const Header = () => {
-    const texts = ["Home", "About", "Publication", "Members", "Contact"];
+    const texts = ["Home", "About", "Publication", "Members"];
     const [showdetail, setShowDetail] = useState(false);
     const onIconClicked = useCallback(() => {
         setShowDetail(showdetail => !showdetail)
@@ -17,7 +18,7 @@ const Header = () => {
             <Link href="/"><Logo>Information Security Lab</Logo></Link>
             <Menu showdetail={showdetail}>
                 {texts.map((v) => (
-                    <Menu_btn key={v} text={v}></Menu_btn>
+                    <ScrollTo selector={"#" + v}><Menu_btn key={v} text={v}></Menu_btn></ScrollTo>
                 ))}
             </Menu>
             <Bars onClick={onIconClicked}/>

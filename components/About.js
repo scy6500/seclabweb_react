@@ -1,9 +1,8 @@
 import styled from "styled-components"
-import PropTypes from "prop-types";
 
 const About = () => {
     return (
-            <Inner>
+            <Inner id={"About"}>
             <Inner_title>About</Inner_title>
                 <Inner_content>
                         Welcome to Information Security Laboratory in the College of Computer Science at Kookmin University.<br />

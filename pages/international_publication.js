@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Publication_header from "../components/Publication_header";
 import International_pub from "../components/International_pub"
 import styled, { createGlobalStyle } from 'styled-components';
 
@@ -6,7 +6,7 @@ const international_publication = () => {
     return (
         <div>
             <GlobalStyle/>
-            <Header></Header>
+            <Publication_header></Publication_header>
             <International_pub></International_pub>
         </div>
     )

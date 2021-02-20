@@ -17,7 +17,7 @@ const Members = () => {
         getMembers();
     }, [])
     return (
-        <Inner>
+        <Inner id={"Members"}>
             <Title>Members</Title>
             <Box>
                 {memberData.map((v) => (
