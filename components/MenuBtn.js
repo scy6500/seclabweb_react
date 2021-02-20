@@ -1,8 +1,7 @@
 import styled from "styled-components"
 import PropTypes from "prop-types";
-import Link from "next/link";
 
-const Menu_btn = (props) => {
+const MenuBtn = (props) => {
     const {text} = props;
     return (
         <Btn>{text}</Btn>
@@ -18,8 +17,8 @@ const Btn = styled.div`
     } 
 `;
 
-Menu_btn.propTypes = {
+MenuBtn.propTypes = {
     text: PropTypes.string.isRequired
 }
 
-export default Menu_btn;
+export default MenuBtn;

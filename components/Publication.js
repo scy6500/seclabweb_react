@@ -7,37 +7,36 @@ import { useCallback, useState } from "react";
 const Publication = () => {
     const [isOverseasHover, setisOverseasHover] = useState(false);
     const [isDomesticHover, setisDomesticHover] = useState(false);
-    const overseas_mouseenter = useCallback(() => {
+    const overseasMouseEnter = useCallback(() => {
         setisOverseasHover(true);
     }, []);
-    const overseas_mouseleave = useCallback(() => {
+    const overseasMouseLeave = useCallback(() => {
         setisOverseasHover(false);
     }, []);
-    const domestic_mouseenter = useCallback(() => {
+    const domesticMouseEnter = useCallback(() => {
         setisDomesticHover(true);
     }, []);
-    const domestic_mouseleave = useCallback(() => {
+    const domesticMouseLeave = useCallback(() => {
         setisDomesticHover(false);
     }, []);
     return (
         <Inner id={"Publication"}>
             <Title>Publication</Title>
             <Category>
-                <Link href="/international_publication">
-                    <Overseas_pub onMouseEnter={overseas_mouseenter} onMouseLeave={overseas_mouseleave} isDomesticHover={isDomesticHover}>
+                <Link href="/internationalPublication">
+                    <OverseasPub onMouseEnter={overseasMouseEnter} onMouseLeave={overseasMouseLeave} isDomesticHover={isDomesticHover}>
                             <Overseas/>
-                            <h3>Overseas publications</h3>
-                    </Overseas_pub>
+                            <h3>Overseas Publications</h3>
+                    </OverseasPub>
                 </Link>
-                <Link href="/domestic_publication">
-                    <Domestic_pub onMouseEnter={domestic_mouseenter} onMouseLeave={domestic_mouseleave} isOverseasHover={isOverseasHover}>
+                <Link href="/domesticPublication">
+                    <DomesticPub onMouseEnter={domesticMouseEnter} onMouseLeave={domesticMouseLeave} isOverseasHover={isOverseasHover}>
                         <Domestic/>
-                        <h3>Domestic publications</h3>
-                    </Domestic_pub>
+                        <h3>Domestic Publications</h3>
+                    </DomesticPub>
                 </Link>
             </Category>
         </Inner>
-
     )
 }
 
@@ -71,7 +70,7 @@ const Category = styled.div`
         flex-direction: column;
     }
 `
-const Overseas_pub = styled.div`
+const OverseasPub = styled.div`
     text-align: center;
     opacity: ${({ isDomesticHover }) => isDomesticHover ? 0.5 : 1};
     &:hover {
@@ -80,7 +79,7 @@ const Overseas_pub = styled.div`
     margin-bottom: 30px;
 `
 
-const Domestic_pub = styled.div`
+const DomesticPub = styled.div`
     text-align: center;
     opacity: ${({ isOverseasHover }) => isOverseasHover ? 0.5 : 1};
     &:hover {

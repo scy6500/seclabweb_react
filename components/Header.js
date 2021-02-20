@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Menu_btn from "../components/Menu_btn";
+import MenuBtn from "./MenuBtn";
 import Link from "next/link";
 import {MenuOutlined} from "@ant-design/icons";
 import "antd/dist/antd.css"
@@ -22,14 +22,14 @@ const Header = () => {
             <Link href="/"><Logo>Information Security Lab</Logo></Link>
             <Menu showdetail={showdetail} onClick={onMenuClicked}>
                 {texts.map((v) => (
-                    <ScrollTo selector={"#" + v}><Menu_btn key={v} text={v}></Menu_btn></ScrollTo>
+                    <ScrollTo selector={"#" + v}><MenuBtn key={v} text={v}></MenuBtn></ScrollTo>
                 ))}
             </Menu>
             <Bars onClick={onIconClicked}/>
         </Headers>
-        
     )
 }
+
 const Bars = styled(MenuOutlined)`
     color: white;
     display: none;
@@ -40,6 +40,7 @@ const Bars = styled(MenuOutlined)`
         margin: 2px;
     }
 `;
+
 const Headers = styled.header`
     width: 100vw;
     position: fixed;
@@ -77,7 +78,5 @@ const Menu = styled.div`
         display: ${({ showdetail }) => showdetail ? 'flex' : 'none'};
     }
 `
-
-
 
 export default Header;

@@ -3,9 +3,9 @@ import Home from "../components/Home";
 import About from "../components/About";
 import Publication from "../components/Publication"
 import Members from "../components/Members"
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-const Seclab = () => {
+const secLab = () => {
     return (
         <div>
             <GlobalStyle/>
@@ -26,4 +26,4 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
-export default Seclab;
+export default secLab;

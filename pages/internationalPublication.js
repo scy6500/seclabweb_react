@@ -1,13 +1,13 @@
-import Publication_header from "../components/Publication_header";
-import International_pub from "../components/International_pub"
-import styled, { createGlobalStyle } from 'styled-components';
+import PublicationHeader from "../components/PublicationHeader";
+import InternationalPub from "../components/InternationalPub"
+import { createGlobalStyle } from 'styled-components';
 
-const international_publication = () => {
+const internationalPublication = () => {
     return (
         <div>
             <GlobalStyle/>
-            <Publication_header></Publication_header>
-            <International_pub></International_pub>
+            <PublicationHeader></PublicationHeader>
+            <InternationalPub></InternationalPub>
         </div>
     )
 }
@@ -20,5 +20,4 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
-
-export default international_publication;
+export default internationalPublication;

@@ -13,10 +13,9 @@ const Home = () => {
                 position="relative"
                 object-fit="cover"
 
-        />
+            />
             <Text>Welcome to Kookmin University's Information Security Lab!</Text>
         </Inner>
-
     )
 }
 

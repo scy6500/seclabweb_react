@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Link from "next/link";
 import "antd/dist/antd.css"
 
-const Publication_header = () => {
+const PublicationHeader = () => {
     return (
         <Headers>
             <Link href="/"><Logo>Information Security Lab</Logo></Link>
@@ -30,4 +30,4 @@ const Logo = styled.a`
     } 
 `
 
-export default Publication_header;
+export default PublicationHeader;

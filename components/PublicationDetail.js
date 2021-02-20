@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import PropTypes from "prop-types";
 
-const Publication_detail = (props) => {
+const PublicationDetail = (props) => {
     const {title, writer, coference, year, month} = props;
     return (
         <Inner>
@@ -17,7 +17,7 @@ const Inner = styled.div`
     margin-bottom: 20px;
 `
 
-Publication_detail.propTypes = {
+PublicationDetail.propTypes = {
     title: PropTypes.string.isRequired,
     writer: PropTypes.string.isRequired,
     conference: PropTypes.string.isRequired,
@@ -25,4 +25,4 @@ Publication_detail.propTypes = {
     month: PropTypes.number.isRequired
 }
 
-export default Publication_detail;
+export default PublicationDetail;

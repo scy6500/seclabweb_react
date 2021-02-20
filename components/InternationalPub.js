@@ -1,10 +1,9 @@
 import styled from "styled-components"
 import React, { useEffect, useState } from "react";
 import dataBase from "../public/Firebase";
-import Publication_detail from "../components/Publication_detail"
+import PublicationDetail from "./PublicationDetail"
 
-
-const International_pub = () => {
+const InternationalPub = () => {
     const [publicationData, setPublicationData] = useState([])
     const getPublication = async() => {
         const publicationDb = dataBase.collection("publications");
@@ -21,8 +20,8 @@ const International_pub = () => {
         <div>
             <Sub>International Publication</Sub>
             <Inner>
-            {publicationData.map((v) => (
-                    <Publication_detail key = {v.title} title={v.title} writer={v.writer} conference={v.conference} year={v.year} month={v.month}></Publication_detail>
+                {publicationData.map((v) => (
+                    <PublicationDetail key = {v.title} title={v.title} writer={v.writer} conference={v.conference} year={v.year} month={v.month}></PublicationDetail>
                 ))}
             </Inner>
         </div>
@@ -42,6 +41,4 @@ const Sub = styled.div`
     margin-bottom: 30px;
 `;
 
-
-
-export default International_pub;
+export default InternationalPub;
