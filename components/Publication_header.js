@@ -7,7 +7,6 @@ const Publication_header = () => {
         <Headers>
             <Link href="/"><Logo>Information Security Lab</Logo></Link>
         </Headers>
-        
     )
 }
 

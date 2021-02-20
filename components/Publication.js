@@ -23,18 +23,18 @@ const Publication = () => {
         <Inner id={"Publication"}>
             <Title>Publication</Title>
             <Category>
-            <Link href="/international_publication">
-                <Overseas_pub onMouseEnter={overseas_mouseenter} onMouseLeave={overseas_mouseleave} isDomesticHover={isDomesticHover}>
-                        <Overseas/>
-                        <h3>Overseas publications</h3>
-                </Overseas_pub>
-            </Link>
-            <Link href="/">
-                <Domestic_pub onMouseEnter={domestic_mouseenter} onMouseLeave={domestic_mouseleave} isOverseasHover={isOverseasHover}>
-                    <Domestic/>
-                    <h3>Domestic publications</h3>
-                </Domestic_pub>
-            </Link>
+                <Link href="/international_publication">
+                    <Overseas_pub onMouseEnter={overseas_mouseenter} onMouseLeave={overseas_mouseleave} isDomesticHover={isDomesticHover}>
+                            <Overseas/>
+                            <h3>Overseas publications</h3>
+                    </Overseas_pub>
+                </Link>
+                <Link href="/domestic_publication">
+                    <Domestic_pub onMouseEnter={domestic_mouseenter} onMouseLeave={domestic_mouseleave} isOverseasHover={isOverseasHover}>
+                        <Domestic/>
+                        <h3>Domestic publications</h3>
+                    </Domestic_pub>
+                </Link>
             </Category>
         </Inner>
 
@@ -43,7 +43,7 @@ const Publication = () => {
 
 const Inner = styled.div`
     width: 100%;
-    height: 500px; 
+    height: 100%; 
     background-color: rgb(247, 247, 247);
 `
 
@@ -65,8 +65,11 @@ const Domestic = styled(GatewayOutlined)`
 
 const Category = styled.div`
     display: flex;
-    margin: 60px 0;
+    margin-top: 30px;
     justify-content : space-around;
+    @media screen and (max-width: 575px) {
+        flex-direction: column;
+    }
 `
 const Overseas_pub = styled.div`
     text-align: center;
@@ -74,6 +77,7 @@ const Overseas_pub = styled.div`
     &:hover {
         cursor: pointer;
     } 
+    margin-bottom: 30px;
 `
 
 const Domestic_pub = styled.div`
@@ -82,6 +86,7 @@ const Domestic_pub = styled.div`
     &:hover {
         cursor: pointer;
     } 
+    margin-bottom: 30px;
 `
 
 export default Publication;
