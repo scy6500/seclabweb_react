@@ -12,11 +12,15 @@ const Header = () => {
     const onIconClicked = useCallback(() => {
         setShowDetail(showdetail => !showdetail)
     }, []);
-
+    const onMenuClicked = useCallback(() => {
+        if (showdetail === true){
+            setShowDetail(showdetail => !showdetail)
+        }
+    });
     return (
         <Headers>
             <Link href="/"><Logo>Information Security Lab</Logo></Link>
-            <Menu showdetail={showdetail}>
+            <Menu showdetail={showdetail} onClick={onMenuClicked}>
                 {texts.map((v) => (
                     <ScrollTo selector={"#" + v}><Menu_btn key={v} text={v}></Menu_btn></ScrollTo>
                 ))}
