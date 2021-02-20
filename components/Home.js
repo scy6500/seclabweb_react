@@ -24,7 +24,6 @@ const Inner = styled.div`
     height: 100vh;
     position: relative;
     z-index: 99;
-    position: relative;
 `
 
 const Filiter = styled.div`
@@ -48,6 +47,7 @@ const Text = styled.h1`
     overflow:hidden; 
     text-overflow:ellipsis;
     white-space:nowrap;
+    font-size: 3vw;
 `
 
 export default Home;
